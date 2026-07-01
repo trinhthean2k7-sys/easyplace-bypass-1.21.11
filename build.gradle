@@ -13,8 +13,5 @@ repositories {
 dependencies {
     compileOnly "net.fabricmc:fabric-loader:0.16.0"
     compileOnly "net.fabricmc.fabric-api:fabric-api:0.102.0+1.21.11"
-    
-    // Copy mod từ máy bạn vào đây
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-}
 }
