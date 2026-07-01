@@ -1,21 +1,6 @@
-{
-  "schemaVersion": 1,
-  "id": "donut_bypass",
-  "version": "1.0.0",
-  "name": "Donut EasyPlace Bypass",
-  "description": "Bypass easy place rotation on Donut SMP",
-  "authors": ["You"],
-  "license": "MIT",
-  "environment": "client",
-  "entrypoints": {
-    "client": [
-      "net.example.mod.LitematicaEasyBypass"
-    ]
-  },
-  "depends": {
+"depends": {
     "fabricloader": ">=0.18.1",
     "minecraft": "1.21.11",
-    "java": ">=22",
+    "java": ">=21",
     "fabric-api": "*"
   }
-}
