@@ -1,9 +1,6 @@
 plugins {
     id 'java'
-    id 'fabric-loom' version '1.17-SNAPSHOT'
-}
-loom {
-    accessWidenerPath = file("src/main/resources/donut.accesswidener")
+    id 'fabric-loom' version '1.7-SNAPSHOT'
 }
 
 version = '1.0.0'
@@ -16,13 +13,11 @@ repositories {
 
 dependencies {
     minecraft "com.mojang:minecraft:1.21.11"
-    mappings loom.officialMojangMappings() // Dòng này quan trọng!
+    mappings "net.fabricmc:yarn:1.21.11+build.1:v2"
     modImplementation "net.fabricmc:fabric-loader:0.16.0"
     modImplementation "net.fabricmc.fabric-api:fabric-api:+"
-    modImplementation fileTree(dir: 'libs', include: ['*.jar'])
-}
 
-    // Đọc trực tiếp file mod từ thư mục libs của bạn
+    // Dòng này phải nằm TRONG khối dependencies này thì nó mới chạy được
     modImplementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
