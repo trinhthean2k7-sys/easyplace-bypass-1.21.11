@@ -1,30 +1,9 @@
-plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
-}
-
-version = '1.0.0'
-group = 'net.example.mod'
-
-repositories {
-    maven { url = "https://maven.fabricmc.net/" }
-}
-
-dependencies {
-    minecraft "com.mojang:minecraft:1.21.11"
-    mappings "net.fabricmc:yarn:1.21.11+build.1:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.18.1"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:+"
-
-    // Đọc trực tiếp Litematica và MaLiLib từ thư mục libs bạn vừa up lên!
-    modImplementation fileTree(dir: 'libs', include: ['*.jar'])
-}
-
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 22
+    it.options.release = 21
 }
 
 java {
     withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_22
-    targetCompatibility = JavaVersion.VERSION_22
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
